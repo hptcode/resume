@@ -78,7 +78,7 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href="../" className="hover:opacity-80 transition-opacity">
+          <a href="#experience" onClick={(e) => handleNavClick(e, '#experience')} className="hover:opacity-80 transition-opacity">
             <h1 className="text-xl font-bold text-foreground" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Patrick Ho
             </h1>
