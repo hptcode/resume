@@ -12,12 +12,12 @@ const navItems = [
 ]
 
 const coreSkills = [
-  { name: 'Enterprise Systems Installation & Support', icon: Server },
-  { name: 'UNIX/Linux Systems Administration', icon: Terminal },
-  { name: 'Oracle Engineered Systems & OCI', icon: Database },
-  { name: 'Network Administration & Troubleshooting', icon: Network },
+  { name: 'UNIX/Linux/Windows Systems Administration', icon: Terminal },
+  { name: 'Virtualization & Docker Containerization', icon: Server },
+  { name: 'Database Administration', icon: Database },
+  { name: 'Cisco Network Administration', icon: Network },
   { name: 'SAN/NAS Storage Infrastructure', icon: Database },
-  { name: 'Shell Scripting & Automation', icon: Shield }
+  { name: 'Continuous Application Deployment', icon: Shield }
 ]
 
 const workExperience = [
@@ -210,11 +210,11 @@ function CareerSummary() {
           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
             <p className="text-foreground/80 leading-relaxed text-lg">
               Experienced IT Infrastructure and Systems Specialist with 20+ years of experience supporting
-              enterprise systems, UNIX/Linux environments, networking infrastructure, Oracle engineered
-              systems, and customer-facing technical operations. Strong background in systems integration,
-              troubleshooting, cloud infrastructure integration, enterprise deployments, and technical
-              support. Proven ability to support mission-critical environments, deliver infrastructure
-              projects, and provide technical training and documentation.
+              enterprise systems, UNIX/Linux/Windows environments, networking infrastructure, Oracle engineered
+              systems, and customer-facing technical operations. Proven track record in systems integration,
+              troubleshooting, cloud infrastructure integration, and application deployments. Strong ability to
+              support mission-critical environments, deliver infrastructure projects, and provide technical
+              training and documentation.
             </p>
           </div>
         </motion.div>
