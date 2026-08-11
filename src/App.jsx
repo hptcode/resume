@@ -154,7 +154,7 @@ function HeroSection() {
       id="about"
       className="hero-section relative min-h-[100dvh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5')"
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/hero-bg.jpg')"
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
