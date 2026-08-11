@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, MapPin, Download, Menu, X, Server, Database, Network, Shield, Terminal, GraduationCap } from 'lucide-react'
+import { Mail, MapPin, Download, Menu, X, Server, Database, Network, Shield, Terminal, GraduationCap, GitFork, FolderGit2 } from 'lucide-react'
 import './App.css'
 
 const navItems = [
@@ -14,10 +14,13 @@ const navItems = [
 const coreSkills = [
   { name: 'UNIX/Linux/Windows Systems Administration', icon: Terminal },
   { name: 'Virtualization & Docker Containerization', icon: Server },
+  { name: 'Self-Hosted Deployment & Coolify (PaaS)', icon: Server },
   { name: 'Database Administration', icon: Database },
   { name: 'Cisco Network Administration', icon: Network },
   { name: 'SAN/NAS Storage Infrastructure', icon: Database },
-  { name: 'Continuous Application Deployment', icon: Shield }
+  { name: 'Continuous Application Deployment', icon: Shield },
+  { name: 'AI-Powered Dev Tools & Agents (Claude Code, Hermes)', icon: Terminal },
+  { name: 'Open-Source Development & GitHub', icon: Database }
 ]
 
 const workExperience = [
@@ -169,8 +172,9 @@ function HeroSection() {
             Systems Support Specialist
           </p>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-3xl mx-auto">
-            Seasoned IT professional with over 20 years of experience delivering enterprise-level technical solutions.
-            Specialized in Oracle technologies, UNIX/Linux systems, and mission-critical infrastructure support.
+            Seasoned IT professional with over 20 years of enterprise experience across Oracle technologies,
+            UNIX/Linux systems, and mission-critical infrastructure. Passionate about self-hosted deployments,
+            Docker containerization, AI-powered developer tooling, and building open-source projects on GitHub.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2 text-white/90">
@@ -209,12 +213,13 @@ function CareerSummary() {
           <h2 className="text-center mb-8 text-foreground">Career Summary</h2>
           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Experienced IT Infrastructure and Systems Specialist with 20+ years of experience supporting
-              enterprise systems, UNIX/Linux/Windows environments, networking infrastructure, Oracle engineered
-              systems, and customer-facing technical operations. Proven track record in systems integration,
-              troubleshooting, cloud infrastructure integration, and application deployments. Strong ability to
-              support mission-critical environments, deliver infrastructure projects, and provide technical
-              training and documentation.
+              Experienced IT Infrastructure and Systems Specialist with 20+ years supporting enterprise systems,
+              UNIX/Linux/Windows environments, networking infrastructure, Oracle engineered systems, and
+              customer-facing technical operations. Deeply interested in modern DevOps and self-hosting —
+              deploying containerized applications with Docker and Coolify — and actively exploring AI-powered
+              developer tooling and agents such as Claude Code and Hermes. Maintains personal open-source projects
+              on <a href="https://github.com/hptcode" className="text-primary underline" target="_blank" rel="noopener noreferrer">GitHub</a>,
+              demonstrating continuous learning and hands-on engineering outside the day job.
             </p>
           </div>
         </motion.div>
@@ -388,6 +393,67 @@ function ContactSection() {
   )
 }
 
+const openSourceProjects = [
+  {
+    name: 'homeXpensify',
+    description:
+      'A self-hosted, multitenant home expense tracker built as an open-source project. Demonstrates hands-on skills in web application development, multi-user/multi-tenant data modeling, and Docker containerization for deployment.',
+    tags: ['Web Development', 'Multitenant', 'Docker', 'Self-Hosted']
+  }
+]
+
+function OpenSourceSection() {
+  return (
+    <section id="projects" className="py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-center mb-12 text-foreground">Open Source &amp; Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+            {openSourceProjects.map((project, index) => (
+              <motion.div
+                key={project.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <FolderGit2 className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground mb-1">{project.name}</h3>
+                    <p className="text-foreground/80 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="text-xs font-medium bg-muted text-muted-foreground px-3 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center mt-6">
+            <a href="https://github.com/hptcode" className="inline-flex items-center gap-2 text-primary hover:opacity-80 transition-opacity" target="_blank" rel="noopener noreferrer">
+              <GitFork className="h-5 w-5" /> github.com/hptcode
+            </a>
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
 function Footer() {
   return (
     <footer className="border-t bg-muted/50 mt-20">
@@ -403,6 +469,12 @@ function Footer() {
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
               <span>Vancouver, BC</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <GitFork className="h-4 w-4" />
+              <a href="https://github.com/hptcode" className="hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                github.com/hptcode
+              </a>
             </div>
           </div>
         </div>
@@ -420,6 +492,7 @@ function App() {
         <CareerSummary />
         <SkillsSection />
         <ExperienceSection />
+        <OpenSourceSection />
         <EducationSection />
         <ContactSection />
       </main>
