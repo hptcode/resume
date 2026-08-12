@@ -179,7 +179,7 @@ function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2 text-white/90">
               <Mail className="h-5 w-5" />
-              <a href="mailto:p@patrickho.ca" className="hover:underline">p@patrickho.ca</a>
+              <a href="mailto:ho_p@yahoo.com" className="hover:underline">ho_p@yahoo.com</a>
             </div>
             <div className="flex items-center gap-2 text-white/90">
               <MapPin className="h-5 w-5" />
@@ -378,7 +378,7 @@ function ContactSection() {
               <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
               <p className="text-sm text-muted-foreground mb-2">Email</p>
               <p className="text-foreground font-medium">
-                <a href="mailto:p@patrickho.ca">p@patrickho.ca</a>
+                <a href="mailto:ho_p@yahoo.com">ho_p@yahoo.com</a>
               </p>
             </div>
             <div className="bg-card rounded-xl p-6 shadow-sm border border-border">
@@ -462,8 +462,8 @@ function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <a href="mailto:p@patrickho.ca" className="hover:text-foreground transition-colors">
-                p@patrickho.ca
+              <a href="mailto:ho_p@yahoo.com" className="hover:text-foreground transition-colors">
+                ho_p@yahoo.com
               </a>
             </div>
             <div className="flex items-center gap-2">
