@@ -53,4 +53,19 @@ html {
   h2 {
     font-size: 14pt;
   }
+
+  /* Force all Framer Motion animated sections fully visible when printing.
+     Animated elements start at opacity:0 and only fade in on scroll,
+     so without this the printed page would omit them. */
+  .motion-div,
+  [style*="opacity: 0"],
+  [style*="opacity:0"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  main > section,
+  section {
+    break-inside: auto;
+  }
 }
