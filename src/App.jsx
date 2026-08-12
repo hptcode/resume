@@ -213,13 +213,17 @@ function CareerSummary() {
           <h2 className="text-center mb-8 text-foreground">Career Summary</h2>
           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Experienced IT Infrastructure and Systems Specialist with 20+ years supporting enterprise systems,
-              UNIX/Linux/Windows environments, networking infrastructure, Oracle engineered systems, and
-              customer-facing technical operations. Deeply interested in modern DevOps and self-hosting —
-              deploying containerized applications with Docker and Coolify — and actively exploring AI-powered
-              developer tooling and agents such as Claude Code and Hermes. Maintains personal open-source projects
-              on <a href="https://github.com/hptcode" className="text-primary underline" target="_blank" rel="noopener noreferrer">GitHub</a>,
-              demonstrating continuous learning and hands-on engineering outside the day job.
+              IT infrastructure and systems specialist with more than two decades of experience keeping
+              enterprise environments — UNIX, Linux, and Windows, networking, Oracle engineered systems, and
+              customer-facing technical operations — stable, secure, and performing at their best. Takes a
+              reliability-first approach to infrastructure: fewer incidents when the foundations are built and
+              maintained well.
+            </p>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-lg">
+              Currently focused on modern DevOps and self-hosting, deploying containerized applications with
+              Docker and Coolify, while exploring AI-powered developer tooling such as Claude Code and Hermes. Brings a
+              continuous-learning mindset grounded in hands-on engineering, including personal open-source
+              projects on <a href="https://github.com/hptcode" className="text-primary underline" target="_blank" rel="noopener noreferrer">GitHub</a>.
             </p>
           </div>
         </motion.div>
